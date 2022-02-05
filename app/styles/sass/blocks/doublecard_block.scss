@@ -1,0 +1,227 @@
+.spectre-doublecard {
+    margin: 0 -13px;
+    padding-bottom: 32px;
+
+    @include bp(sm1) {
+        margin: 0;
+    }
+    @include bp(xxl) {
+        padding-bottom: 60px;
+    }
+    @include bp(fhd) {
+        padding-bottom: 95px;
+    }
+
+    .spectre-title {
+        margin: 0 -10px 29px;
+        padding: 0;
+
+        @include bp(sm1) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @include bp(md1) {
+            margin-bottom: 59px;
+        }
+        @include bp(fhd) {
+            margin-bottom: 65px;
+        }
+    }
+
+    &__wrap {
+        counter-reset: spectre-counter;
+
+        @include bp(xxl) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -27px;
+        }
+        @include bp(fhd) {
+            margin-left: -36px;
+        }
+    }
+
+    &__item {
+        margin: 0 0 38px;
+        background: #cce3f4;
+        border-radius: 12px;
+        position: relative;
+        padding: 39px 10px 61px;
+        overflow: hidden;
+
+        @include bp(xxl) {
+            margin: 0 0 40px 27px;
+            flex: 0 0 calc(33.33% - 27px);
+            max-width: calc(33.33% - 27px);
+            padding: 47px 10px 74px;
+        }
+        @include bp(fhd) {
+            flex: 0 0 calc(33.33% - 36px);
+            max-width: calc(33.33% - 36px);
+            margin: 0 0 54px 36px;
+            padding: 63px 15px 100px;
+        }
+
+        &:before {
+            position: absolute;
+            counter-increment: spectre-counter;
+            content: counter(spectre-counter, decimal-leading-zero);
+            color: #72b2e1;
+            font-size: 83px;
+            line-height: 1;
+            top: 3px;
+            left: -17px;
+            pointer-events: none;
+            font-weight: 800;
+
+            @include bp(xxl) {
+                font-size: 100px;
+                left: -21px;
+                letter-spacing: -4px;
+            }
+            @include bp(fhd) {
+                font-size: 136px;
+                left: -29px;
+                top: 0;
+                letter-spacing: -5px;
+            }
+        }
+
+        &--form {
+            background: url(../images/dist/form_bg1.png) 50% 50% / cover no-repeat;
+            padding: 20px 50px;
+            min-height: 242px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        padding: 0 0 27px 78px;
+        margin-bottom: 27px;
+        position: relative;
+        font-size: 16px;
+        line-height: 20px;
+        color: #0c2069;
+        font-weight: 600;
+
+        @include bp(xxl) {
+            font-size: 20px;
+            line-height: 24px;
+            padding-left: 94px;
+            letter-spacing: -0.5px;
+        }
+        @include bp(fhd) {
+            font-size: 27px;
+            line-height: 33px;
+            padding-left: 130px;
+            padding-bottom: 43px;
+        }
+
+        &:before {
+            position: absolute;
+            bottom: 0;
+            left: 64px;
+            width: 110px;
+            content: '';
+            border-top: 1px solid;
+
+            @include bp(xxl) {
+                left: 75px;
+            }
+            @include bp(fhd) {
+                left: 110px;
+                width: 180px;
+            }
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 1.35;
+        text-align: center;
+        color: #0c2069;
+
+        @include bp(fhd) {
+            font-size: 20px;
+        }
+    }
+
+    &__form {
+
+        &-field {
+            margin-bottom: 17px;
+
+            @include bp(fhd) {
+                margin-bottom: 28px;
+                padding: 0 30px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-title {
+            font-size: 21px;
+            line-height: 26px;
+            color: #fff;
+            margin-bottom: 17px;
+            font-weight: 600;
+
+            @include bp(fhd) {
+                font-size: 31px;
+                line-height: 38px;
+                margin-bottom: 23px;
+            }
+
+            &--success {
+                display: none;
+
+                div {
+                    font-size: 17px;
+                    line-height: 1.4;
+                    font-weight: normal;
+                    margin: 15px -20px 0;
+                }
+            }
+        }
+
+        &-button {
+            width: 100%;
+            height: 30px;
+            font-size: 13px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .spectre-input {
+            height: 34px;
+
+            @include bp(xxl) {
+                height: 42px;
+            }
+            @include bp(fhd) {
+                height: 56px;
+                border-radius: 14px;
+            }
+        }
+
+        .spectre-btn {
+            @include bp(xxl) {
+                height: 36px;
+            }
+            @include bp(fhd) {
+                height: 50px;
+                border-radius: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.spectre-finishing {
+    padding-bottom: 77px;
+    margin: 0 -25px;
+
+    @include bp(md) {
+        margin: 0;
+    }
+    @include bp(xxl) {
+        padding-bottom: 84px;
+    }
+    @include bp(fhd) {
+        padding-bottom: 130px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 41px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #2C2839;
+        text-transform: uppercase;
+
+        @include bp(xxl) {
+            font-size: 40px;
+            margin-bottom: 33px;
+        }
+        @include bp(fhd) {
+            font-size: 56px;
+            margin-bottom: 46px;
+        }
+    }
+
+    &__grid {
+        @include bp(md) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -30px;
+        }
+    }
+
+    &__item {
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+        margin-bottom: 41px;
+        height: 170px;
+        display: flex;
+        align-items: flex-end;
+        padding: 10px;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 21px;
+        color: #fff;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        @include bp(sm1) {
+            height: 240px;
+        }
+        @include bp(sm2) {
+            height: 300px;
+        }
+        @include bp(md) {
+            height: 220px;
+            flex: 0 0 calc(50% - 30px);
+            max-width: calc(50% - 30px);
+            margin: 0 0 30px 30px;
+        }
+        @include bp(md1) {
+            height: 260px;
+        }
+        @include bp(xxl) {
+            flex-basis: calc(27.5% - 30px);
+            max-width: calc(27.5% - 30px);
+            height: 180px;
+            padding: 15px;
+
+            &:nth-child(1), &:nth-child(6) {
+                flex-basis: calc(45% - 30px);
+                max-width: calc(45% - 30px);
+            }
+
+            &:first-child:after {
+                left: 10px;
+                right: -10px;
+                top: 10px;
+                bottom: -10px;
+                position: absolute;
+                content: '';
+                border: 1px solid #000;
+                z-index: -1;
+            }
+        }
+        @include bp(fhd) {
+            height: 240px;
+            padding: 20px;
+        }
+
+        &:before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            content: '';
+            background: linear-gradient(180deg, rgba(52, 44, 75, 0) 0%, #24202E 100%);
+            opacity: 0.7;
+        }
+    }
+
+    &__text {
+        position: relative;
+        font-size: 18px;
+        line-height: 22px;
+
+        @include bp(fhd) {
+            font-size: 25px;
+            line-height: 31px;
+        }
+    }
+}

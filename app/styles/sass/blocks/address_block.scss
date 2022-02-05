@@ -1,0 +1,83 @@
+.spectre-address {
+    margin: 0 -20px 51px;
+
+    @include bp(sm1) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        color: #0074c9;
+        margin-bottom: 28px;
+        text-align: center;
+        font-weight: 600;
+
+        @include bp(md1) {
+            font-size: 40px;
+            line-height: 49px;
+            text-align: left;  
+        }
+        @include bp(xxl) {
+            margin-bottom: 25px;
+        }
+        @include bp(fhd) {
+            font-size: 60px;
+            line-height: 73px;
+            margin-bottom: 33px;
+        }
+
+        br {
+            display: none;
+
+            @include bp(md1) {
+                display: block;
+            }
+        }
+    }
+
+    &__grid {
+        @include bp(xxl) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 19px;
+        text-align: center;
+        color: #000;
+
+        @include bp(md) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 30px;
+        }
+        @include bp(xxl) {
+            flex: 1 0 1%;
+            text-align: left;
+        }
+        @include bp(fhd) {
+            font-size: 23px;
+            line-height: 28px;
+        }
+    }
+
+    &__image {
+        font-size: 0;
+
+        @include bp(xxl) {
+            flex: 0 0 536px;
+            max-width: 536px;
+            margin-left: 50px;
+        }
+        @include bp(fhd) {
+            flex: 0 0 765px;
+            max-width: 765px;
+            margin-left: 44px;
+        }
+    }
+}

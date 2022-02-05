@@ -1,0 +1,251 @@
+.spectre-form-block {
+    margin: 0 -40px 56px;
+
+    @include bp(md) {
+        margin-bottom: 121px;
+    }
+    @include bp(xxl) {
+        margin: 0 0 200px -30px;
+    }
+    @include bp(fhd) {
+        margin-left: -40px;
+    }
+
+    .spectre-title {
+        margin: 0 40px 24px;
+
+        @include bp(xxl) {
+            margin-bottom: 46px;
+        }
+        @include bp(fhd) {
+            margin-bottom: 71px;
+        }
+    }
+
+    &__wrap {
+        background: #147FCD url(../images/dist/ipoteka_bg.png) left 100% top calc(100% + 1px) / cover no-repeat;
+        padding: 39px 20px 64px;
+
+        @include bp(xxl) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 49px 60px 70px 72px;
+            background-image: url(../images/dist/ipoteka_bg1.png);
+        }
+        @include bp(xxxl) {
+            padding: 49px 100px 70px 90px;
+        }
+        @include bp(fhd) {
+            margin-left: -40px;
+            padding: 59px 90px 80px 140px;
+        }
+    }
+
+    &__left {
+        @include bp(xxl) {
+            flex: 1 0 calc(100% - 242px - 40px);
+            max-width: calc(100% - 242px - 40px);
+        }
+        @include bp(fhd) {
+            flex: 1 0 calc(100% - 320px - 60px);
+            max-width: calc(100% - 320px - 60px);
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: 35px;
+        line-height: 43px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 27px;
+
+        @include bp(sm1) {
+            display: block;
+            text-align: center;
+        }
+        @include bp(xxl) {
+            text-align: left;
+            font-size: 40px;
+            line-height: 49px;
+        }
+        @include bp(fhd) {
+            font-size: 56px;
+            line-height: 69px;
+            margin-bottom: 17px;
+        }
+
+        span:first-child {
+            position: relative;
+            margin: 0 35px 12px auto;
+            z-index: 1;
+
+            &:before {
+                position: absolute;
+                left: -27px;
+                bottom: 0;
+                width: 212px;
+                content: '';
+                border-top: 27px solid #10B130;
+                z-index: -1;
+            }
+
+            @include bp(sm1) {
+                margin: 0;
+            }
+        }
+
+        span:last-child {
+            margin-left: auto;
+
+            @include bp(sm1) {
+                margin: 0;
+            }
+        }
+    }
+
+    &__subtitle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 35px;
+
+        @include bp(md) {
+            flex-wrap: nowrap;
+        }
+        @include bp(xxl) {
+            margin-bottom: 0;
+            text-align: left;
+            justify-content: flex-start;
+            margin-left: -6px;
+        }
+    }
+
+    &__small {
+        font-size: 26px;
+        line-height: 31px;
+        color: #fff;
+        margin-right: 12px;
+        position: relative;
+        top: 10px;
+
+        @include bp(md) {
+            font-size: 30px;
+            line-height: 1;
+            top: 6px;
+            margin-right: 15px;
+        }
+        @include bp(fhd) {
+            font-size: 42px;
+            line-height: 1;
+            margin-right: 20px;
+        }
+    }
+
+    &__big {
+        font-size: 76px;
+        line-height: 93px;
+        font-weight: 700;
+        color: #fff;
+
+        @include bp(md) {
+            font-size: 90px;
+            line-height: 1;
+        }
+        @include bp(fhd) {
+            font-size: 127px;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        margin-top: 5px;
+
+        @include bp(md) {
+            width: 306px;
+            margin-left: 25px;
+        }
+        @include bp(fhd) {
+            width: 430px;
+            margin-left: 35px;
+        }
+    }
+
+    &__right {
+        @include bp(xxl) {
+            flex: 0 0 242px;
+            max-width: 242px;
+            margin-left: 40px;
+        }
+        @include bp(fhd) {
+            flex: 0 0 320px;
+            max-width: 320px;
+            margin-left: 40px;
+        }
+
+        &-form {
+            &-title {
+                font-size: 24px;
+                line-height: 29px;
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 34px;
+                text-align: center;
+
+                @include bp(xxl) {
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 29px;
+                }
+                @include bp(fhd) {
+                    font-size: 28px;
+                    line-height: 34px;
+                    margin-bottom: 40px;
+                }
+
+                &--success {
+                    display: none;
+                    margin-bottom: 0;
+                }
+            }
+
+            &-field {
+                margin: 0 20px 18px;
+            }
+
+            &-button {
+                width: 100%;
+            }
+
+            &-note {
+                margin-top: 10px;
+                font-weight: normal;
+                font-size: 50%;
+                line-height: 1.3;
+            }
+
+            .spectre-input {
+                @include bp(xxl) {
+                    height: 42px;
+                }
+                @include bp(fhd) {
+                    height: 58px;
+                }
+            }
+
+            .spectre-btn {
+                @include bp(xxl) {
+                    height: 36px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                }
+                @include bp(fhd) {
+                    height: 52px;
+                }
+            }
+        }
+    }
+}

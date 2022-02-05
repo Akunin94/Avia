@@ -1,0 +1,266 @@
+.spectre-info {
+    margin: 0 -14px 76px;
+
+    @include bp(sm1) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include bp(xl) {
+        margin-bottom: 179px;
+    }
+    @include bp(fhd) {
+        margin-bottom: 230px;
+    }
+
+    .spectre-title {
+        margin: 0 0 40px;
+
+        @include bp(xxl) {
+            max-width: 460px;
+        }
+        @include bp(fhd) {
+            max-width: 600px;
+        }
+    }
+
+    &__wrap {
+        padding: 13px 8px 0;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #0074c9;
+
+        @include bp(sm1) {
+            padding: 20px 20px 0;
+        }
+        @include bp(xl) {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            border-radius: 45px;
+            overflow: hidden;
+        }
+        @include bp(fhd) {
+            border-radius: 65px;
+        }
+    }
+
+    &__left {
+        @include bp(md) {
+            padding: 38px 20px 20px 36px;
+        }
+        @include bp(xl) {
+            padding: 30px 20px 10px 30px;
+        }
+        @include bp(fhd) {
+            padding: 50px 20px 20px 48px;
+        }
+    }
+
+    &__grid {
+        @include bp(xl) {
+            display: flex;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 22px;
+        text-align: center;
+
+        @include bp(xl) {
+            font-size: 25px;
+            line-height: 31px;
+            margin-bottom: 27px;
+            text-align: left;
+        }
+        @include bp(fhd) {
+            font-size: 34px;
+            line-height: 41px;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__description {
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+        padding-bottom: 38px;
+        margin-bottom: 31px;
+        position: relative;
+        text-align: center;
+
+        &:before {
+            position: absolute;
+            left: calc(50% - 84px);
+            width: 168px;
+            bottom: 0;
+            content: '';
+            border-top: 1px solid #fff;
+
+            @include bp(xl) {
+                border: none;
+            }
+        }
+
+        @include bp(xl) {
+            flex: 0 0 52%;
+            max-width: 52%;
+            font-size: 16px;
+            line-height: 20px;
+            padding-right: 30px;
+            text-align: left;
+        }
+        @include bp(xxxl) {
+            font-size: 21px;
+            line-height: 26px;
+            padding-right: 35px;
+        }
+    }
+
+    &__items {
+        padding: 0 40px 15px;
+        width: 252px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+
+        @include bp(md) {
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include bp(xl) {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: auto;
+            padding: 0 40px 0 50px;
+        }
+        @include bp(fhd) {
+            padding-right: 0;
+            flex-grow: 1;
+            flex-basis: auto;
+            max-width: none;
+            width: 350px;
+        }
+
+        &:before {
+            @include bp(xl) {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 20px;
+                bottom: 40px;
+                border-left: 1px solid #fff;
+            }
+        }
+    }
+
+    &__item {
+        padding: 0 0 15px 46px;
+        position: relative;
+        background-position: 0 0;
+        background-size: 33px;
+        background-repeat: no-repeat;
+
+        @include bp(md) {
+            flex: 0 0 210px;
+            max-width: 210px;
+        }
+        @include bp(xl) {
+            background-size: 40px;
+            padding-left: 56px;
+        }
+        @include bp(fhd) {
+            padding-bottom: 20px;
+            padding-left: 76px;
+            background-size: 54px;
+            flex-basis: 310px;
+            max-width: 310px;
+        }
+
+        &--type1 {
+            background-image: url(../images/dist/transport-type1.svg);
+        }
+
+        &--type2 {
+            background-image: url(../images/dist/transport-type2.svg);
+        }
+
+        &--type3 {
+            background-image: url(../images/dist/transport-type3.svg);
+        }
+
+        &-title {
+            font-size: 13px;
+            line-height: 16px;
+            color: #fff;
+            margin-bottom: 7px;
+            font-weight: 500;
+
+            @include bp(xl) {
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 8px;
+            }
+            @include bp(fhd) {
+                font-size: 22px;
+                line-height: 26px;
+                margin-bottom: 11px;
+            }
+        }
+
+        &-body {
+            font-size: 12px;
+            line-height: 14px;
+            color: #fff;
+
+            @include bp(xl) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            @include bp(fhd) {
+                font-size: 19px;
+                line-height: 23px;
+            }
+        }
+    }
+
+    &__image {
+        margin: 0 -8px;
+        font-size: 0;
+
+        @include bp(sm1) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        @include bp(xl) {
+            margin: 0 0 0 20px;
+            flex: 0 0 395px;
+            max-width: 395px;
+        }
+        @include bp(fhd) {
+            flex-basis: 531px;
+            max-width: 531px;
+        }
+    }
+
+    &__img {
+        &--type1 {
+            display: none;
+
+            @include bp(xl) {
+                display: block;
+            }
+        }
+
+        &--type2 {
+            @include bp(xl) {
+                display: none;
+            }
+        }
+    }
+}

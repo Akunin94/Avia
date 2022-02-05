@@ -1,0 +1,480 @@
+@mixin bp($breakpoint) {
+	@if ($breakpoint == sm) {
+		@media all and (min-width: 360px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == sm1) {
+		@media all and (min-width: 480px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == sm2) {
+		@media all and (min-width: 640px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == md) {
+		@media all and (min-width: 768px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == md1) {
+		@media all and (min-width: 960px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == lg) {
+		@media all and (min-width: 992px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == xl) {
+		@media all and (min-width: 1200px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == xxl) {
+		@media all and (min-width: 1260px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == xxxl) {
+		@media all and (min-width: 1400px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == hd) {
+		@media all and (min-width: 1570px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == fhd) {
+		@media all and (min-width: 1880px) {
+			@content;
+		}
+	}
+}
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+		font-display: swap;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=PT+Serif&display=swap&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@include font('whitesaas', normal, normal, '../fonts/whitesaas.woff2');
+
+$mont: 'Montserrat', sans-serif;
+$pt: 'PT Serif', serif;
+$pf: 'Playfair Display', serif;
+
+$accent: orange; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #333; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: $mont; // User Font Family
+
+input, textarea {
+	outline: none;
+}
+
+.spectre-wrap {
+	@include bp(xxl) {
+		display: flex;
+	}
+
+	&__left {
+		display: none;
+		flex: 0 0 208px;
+		max-width: 208px;
+		background: rgba(44, 40, 57, 0.4);
+		backdrop-filter: blur(21px);
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		padding: 20px 22px;
+		margin-bottom: 45px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		min-height: 100%;
+		width: 208px;
+
+		@include bp(xxl) {
+			display: block;
+		}
+		@include bp(xxxl) {
+			padding: 88px 10px 24px;
+		}
+		@include bp(fhd) {
+			width: 290px;
+			max-width: 290px;
+			flex-basis: 290px;
+			padding-top: 123px;
+		}
+
+		&.notmain {
+			z-index: auto;
+		}
+
+		.spectre-header__popup-scroller {
+			scrollbar-color: #00000090 #ffffff60;
+			scrollbar-width: thin;
+			margin-right: -10px;
+			padding: 0 10px 0 0;
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&::-webkit-scrollbar {
+				width: 6px;
+				border-radius: 8px;
+			}
+			&::-webkit-scrollbar-track {
+				background: #ffffff60;
+				border-radius: 8px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: #00000090;
+				border-radius: 8px;
+			}
+		}
+	}
+
+	&__right {
+		max-width: 100%;
+
+		@include bp(xxl) {
+			flex: 0 0 calc(100% - 208px);
+			max-width: calc(100% - 208px);
+			margin-left: 208px;
+			position: relative;
+			z-index: 1;
+		}
+		@include bp(fhd) {
+			flex: 0 0 calc(100% - 290px);
+			max-width: calc(100% - 290px);
+			margin-left: 290px;
+		}
+	}
+
+	&__logo {
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__phone {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 16px;
+		line-height: 1;
+		color: #fff;
+		text-decoration: none;
+		padding: 2px 5px 2px;
+		font-weight: bold;
+		margin: 4px 0;
+
+		@include bp(fhd) {
+			margin: 6px 0;
+			font-size: 23px;
+		}
+
+		&-title {
+			font-size: 9px;
+			line-height: 11px;
+			color: #fff;
+			opacity: 0.6;
+
+			@include bp(xxl) {
+				margin-top: 20px;
+			}
+			@include bp(fhd) {
+				margin-top: 30px;
+				font-size: 13px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&__info {
+		font-size: 7px;
+		line-height: 9px;
+		color: #fff;
+		opacity: 0.6;
+
+		@include bp(fhd) {
+			font-size: 10px;
+			line-height: 12px;
+		}
+	}
+}
+
+.spectre-input, .spectre-textarea {
+	font-size: 15px;
+	line-height: 1;
+	border: none;
+	border-radius: 9px;
+	padding: 5px 10px 6px;
+	background: #fff;
+	font-weight: 600;
+	color: #0074C9;
+	width: 100%;
+	text-align: center;
+	font-family: $userfont;
+	height: 48px;
+
+	&::-webkit-input-placeholder, &:-ms-input-placeholder, &::placeholder, &::-moz-placeholder {
+		color: #0074C9;
+	}
+
+	@include bp(xxl) {
+		height: 52px;
+		font-size: 16px;
+	}
+	@include bp(fhd) {
+		height: 58px;
+		font-size: 17px;
+	}
+}
+
+.spectre-btn {
+	display: inline-block;
+	vertical-align: top;
+	background: #F83A16;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1;
+	padding: 11px 10px 12px;
+	border: none;
+	border-radius: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.2s;
+	font-weight: 700;
+	font-family: $userfont;
+	border: 1px solid transparent;
+
+	&:hover {
+		background: none;
+		color: #F83A16;
+		border-color: #F83A16;
+	}
+
+	@include bp(xxl) {
+		font-size: 18px;
+	}
+	@include bp(fhd) {
+		font-size: 21px;
+		padding-top: 17px;
+		padding-bottom: 18px;
+	}
+
+	&--secondary {
+		background: #0074C9;
+		font-size: 18px;
+		border: 1px solid #0074C9;
+		color: #fff;
+
+		&:hover {
+			border-color: #0074C9;
+			background: none;
+			color: #0074C9;
+		}
+	}
+
+	&--white {
+		background: #fff;
+		color: #000;
+
+		&:hover {
+			background: #ff3838;
+			color: #fff;
+		}
+	}
+
+	&--big {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	&--large {
+		min-width: 220px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		box-shadow: 0px 4px 4px 0px #610F00A3;
+
+		@include bp(fhd) {
+			font-size: 17px;
+			padding-top: 29px;
+			padding-bottom: 29px;
+		}
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+
+.spectre-textarea {
+	height: 100px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	background: #FFFFFF;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.spectre-overflowhidden {
+	overflow: hidden !important;
+}
+
+img {
+	max-width: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.spectre-main {
+	padding: 25px 40px 0;
+	position: relative;
+
+	@include bp(xxxl) {
+		padding: 72px 80px 0;
+	}
+	@include bp(xxl) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+	@include bp(fhd) {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	& > .spectre-title {
+		@include bp(md1) {
+			text-shadow: 0px 4px 4px #00000021;
+
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+.spectre-wrapper {
+	overflow: hidden;
+}
+
+.spectre-title {
+	color: #2C2839;
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 600;
+	margin: 0 -10px 28px;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 13px;
+	text-align: center;
+
+	&:before {
+		position: absolute;
+		border-top: 1px solid #D3D2D5;
+		width: 120px;
+		left: calc(50% - 60px);
+		content: '';
+		bottom: 0;
+
+		@include bp(md1) {
+			display: none;
+		}
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	@include bp(sm) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@include bp(md1) {
+		font-size: 40px;
+		line-height: 1.3;
+		margin-bottom: 45px;
+		text-align: left;
+	}
+	@include bp(fhd) {
+		margin-bottom: 60px;
+		font-size: 56px;
+		line-height: 68px;
+	}
+
+	span {
+		color: #D11818;
+	}
+}
+
+.ws-quiz-container .ws-quiz-btn-container {
+	background: #0074c7;
+}
+.ws-quiz-container .ws-quiz-logo .ws-icon-quiz {
+	color: #0074c7 !important;
+}
+
+@media all and (max-width: 1023px) {
+	.Leadforms__bg {
+		z-index: 11;
+	}
+	body:after {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 66px;
+		background: rgba(0, 0, 0, .33);
+		content: '';
+		z-index: 10;
+	}
+	.ws-quiz-container {
+		.ws-quiz-btn-el-container {
+			inset: auto !important;
+			z-index: 11 !important;
+		}
+		.ws-quiz-btn-rotate {
+			transform: none;
+		}
+		& > .ws-quiz-btn-el-container {
+			position: fixed;
+			left: 15px !important;
+			bottom: 10px !important;
+		}
+	}
+}

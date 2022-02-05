@@ -1,0 +1,112 @@
+.spectre-form1-block {
+    background: #EAEDE8 url(../images/dist/form1_bg.png) 50% 50% / cover no-repeat;
+    padding: 40px 45px 33px;
+    margin: 0 -10px;
+
+    @include bp(sm) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    @include bp(md) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    @include bp(md1) {
+        margin-left: -35px;
+        margin-right: -35px;
+        padding: 60px 60px 80px;
+    }
+    @include bp(xxxl) {
+        margin-left: -80px;
+        margin-right: -80px;
+    }
+
+    &__form {
+        text-align: center;
+
+        @include bp(md1) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @include bp(xxl) {
+            max-width: 762px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 1;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 17px;
+
+            @include bp(md1) {
+                font-size: 45px;
+                margin-bottom: 23px;
+            }
+
+            &--success {
+                margin-bottom: 0;
+                display: none;
+                text-align: center;
+
+                .spectre-form1-block__form-note {
+                    margin-top: 24px;
+                    font-weight: normal;
+
+                    @include bp(md1) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &-description {
+            font-size: 15px;
+            line-height: 1;
+            color: #777;
+            margin-bottom: 23px;
+
+            @include bp(md1) {
+                font-size: 18px;
+                line-height: 1.2;
+                width: 100%;
+                margin-bottom: 34px;
+                padding: 0 20%;
+            }
+        }
+
+        &-field {
+            margin-bottom: 20px;
+
+            @include bp(md1) {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 0 10px;
+                margin-bottom: 37px;
+            }
+        }
+
+        &-button {
+            width: 100%;
+
+            @include bp(md1) {
+                padding-top: 12px;
+                padding-bottom: 13px;
+            }
+        }
+
+        &-note {
+            margin-top: -7px;
+            font-size: 12px;
+            line-height: 1;
+            color: #777;
+
+            @include bp(md1) {
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,349 @@
+.spectre-prices {
+    padding: 30px;
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 7px;
+
+    @include bp(sm2) {
+        padding: 20px;
+    }
+    @include bp(md1) {
+        padding: 73px 60px 52px;
+        margin-bottom: 50px;
+    }
+    @include bp(xl) {
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-bottom: 76px;
+    }
+    @include bp(fhd) {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 80px;
+    }
+
+    &__title {
+        font-size: 26px;
+        line-height: 1;
+        color: #333;
+        margin-bottom: 34px;
+        font-weight: bold;
+        width: 100%;
+
+        br {
+            display: none;
+
+            @include bp(xxl) {
+                display: block;
+            }
+        }
+
+        @include bp(sm2) {
+            padding-left: 40px;
+        }
+        @include bp(md1) {
+            font-size: 45px;
+            margin-bottom: 60px;
+            padding-left: 0;
+        }
+    }
+
+    &__blocks {
+
+        @include bp(sm2) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include bp(fhd) {
+            flex: 0 0 calc(100% - 500px);
+        }
+    }
+
+    &__right {
+        background: #80bf63;
+        color: #fff;
+        margin: 0 -30px -30px;
+        border-radius: 7px;
+        padding: 20px;
+        flex-grow: 1;
+
+        @include bp(sm2) {
+            margin: 0 -20px -20px;
+        }
+        @include bp(md1) {
+            margin: 0 -60px -52px;
+        }
+        @include bp(lg) {
+            padding: 40px;
+        }
+        @include bp(xl) {
+            margin-left: -80px;
+            margin-right: -80px;
+        }
+        @include bp(fhd) {
+            flex: 0 0 400px;
+            margin: -20px 0 0 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-form {
+
+            @include bp(lg) {
+                display: flex;
+                align-items: center;
+            }
+            @include bp(fhd) {
+                display: block;
+            }
+
+            &-right {
+
+                @include bp(lg) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-left: -20px;
+                }
+                @include bp(fhd) {
+                    display: block;
+                    margin-left: 0;
+                }
+            }
+
+            &-title {
+                font-size: 28px;
+                line-height: 1;
+                font-weight: 600;
+                margin-bottom: 34px;
+                text-align: center;
+
+                @include bp(lg) {
+                    flex: 0 0 350px;
+                    margin-right: 31px;
+                    font-size: 36px;
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+                @include bp(fhd) {
+                    margin: 0 0 34px;
+                    text-align: center;
+                }
+
+                &--success {
+                    margin-bottom: 0;
+                    display: none;
+                    text-align: center;
+    
+                    @include bp(md1) {
+                        flex-grow: 1;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    @include bp(fhd) {
+                        margin-bottom: 0;
+                    }
+    
+                    .spectre-prices__right-form-note {
+                        margin-top: 24px;
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            &-field {
+                margin-bottom: 20px;
+
+                @include bp(lg) {
+                    flex: 0 0 50%;
+                    padding: 0 0 0 20px;
+                    margin-bottom: 10px;
+                }
+                @include bp(fhd) {
+                   margin-bottom: 20px;
+                   padding: 0;
+                }
+            }
+
+            &-note {
+                padding-top: 4px;
+                font-size: 12px;
+                line-height: 1;
+                text-align: center;
+
+                @include bp(lg) {
+                    flex: 0 0 100%;
+                    padding: 0 0 0 20px;
+                }
+            }
+
+            &-button {
+                width: 100%;
+            }
+
+            .spectre-input {
+                border: none;
+            }
+        }
+    }
+
+    &__items {
+        padding-bottom: 30px;
+
+        @include bp(sm2) {
+            flex: 0 0 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+            margin-left: 0;
+        }
+        @include bp(fhd) {
+            padding-bottom: 0;
+        }
+
+        &-title {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+
+            @include bp(md1) {
+                font-size: 30px;
+                margin-bottom: 62px;
+            }
+
+            .spectre-prices__items--red & {
+
+                @include bp(sm2) {
+                    text-align: right;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: -8px;
+                width: 150px;
+                content: '';
+                border-top: 20px solid #D5EACC;
+                z-index: -1;
+
+                @include bp(md1) {
+                    width: 229px;
+                    top: -20px;
+                    border-top-width: 40px;
+                    left: 2px;
+                }
+
+                .spectre-prices__items--red & {
+                    border-top-color: #FFD3D3;
+
+                    @include bp(sm2) {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            padding: 0 0 0 65px;
+            position: relative;
+            margin-bottom: 20px;
+
+            @include bp(fhd) {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .spectre-prices__items--red & {
+
+                @include bp(sm2) {
+                    width: 240px;
+                    margin-left: auto;
+                    padding-left: 0;
+                    padding-right: 65px;
+                }
+                @include bp(md1) {
+                    padding-left: 0;
+                    padding-right: 100px;
+                    width: 360px;
+                }
+            }
+
+            @include bp(md1) {
+                padding-left: 100px;
+                margin-bottom: 59px;
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: calc(50% - 25px);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                content: '';
+                background: #f5f5f5 url("data:image/svg+xml,%3Csvg width='33' height='23' viewBox='0 0 33 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31 2L11.6667 21L2 11.5004' stroke='%2380BF63' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31 2L11.6667 21L2 11.5004' stroke='%2380BF63' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center / 20px no-repeat;
+
+                @include bp(md1) {
+                    width: 66px;
+                    height: 66px;
+                    top: calc(50% - 33px);
+                    background-size: 29px;
+                }
+
+                .spectre-prices__items--red & {
+                    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L23 23' stroke='%23FF6E6E' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23 2L2 23' stroke='%23FF6E6E' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    background-size: 17px;
+
+                    @include bp(sm2) {
+                        left: auto;
+                        right: 0;
+                    }
+                    @include bp(md1) {
+                        background-size: 25px;
+                    }
+                }
+            }
+
+            &-header {
+                color: #6ca625;
+                font-size: 16px;
+                line-height: 1;
+                margin-bottom: 4px;
+
+                @include bp(md1) {
+                    font-size: 20px;
+                    margin-bottom: 6px;
+                }
+
+                .spectre-prices__items--red & {
+                    color: #ff6f6f;
+                }
+            }
+
+            &-price {
+                font-weight: 600;
+                color: #333;
+                font-size: 30px;
+                line-height: 1;
+
+                @include bp(md1) {
+                    font-size: 50px;
+                }
+
+                span {
+                    color: #6ca625;
+                    margin: 0 10px;
+
+                    .spectre-prices__items--red & {
+                        color: #ff6f6f;
+                    }
+                }
+            }
+        }
+    }
+}

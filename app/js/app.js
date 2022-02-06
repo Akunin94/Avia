@@ -571,7 +571,7 @@ $(function(){
 	}
 
 	function setMarkers(map, coords, iconUrl, main = false) {
-		var iconSize = [28, 28];
+		var iconSize = [40, 40];
 		if (main) {
 			iconSize = [64, 64];
 		}

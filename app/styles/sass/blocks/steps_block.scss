@@ -1,0 +1,109 @@
+.spectre-steps {
+    padding-bottom: 75px;
+    counter-reset: spectre-counter;
+    margin: 0 -25px;
+
+    @include bp(sm1) {
+        margin: 0;
+    }
+    @include bp(xxl) {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include bp(fhd) {
+        padding-bottom: 133px;
+    }
+
+    &__item {
+        position: relative;
+        color: #000;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 157px;
+        padding: 44px 0 0 40px;
+        font-weight: 500;
+        margin-right: -10px;
+        
+        @include bp(xxl) {
+            flex: 0 0 calc(41% - 80px);
+            max-width: calc(41% - 80px);
+            margin: 0;
+        } 
+        @include bp(fhd) {
+            flex: 0 0 calc(42% - 160px);
+            max-width: calc(42% - 160px);
+            font-size: 34px;
+            line-height: 41px;
+            padding: 76px 0 0 66px;
+        }
+
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: counter(spectre-counter,decimal-leading-zero);
+            counter-increment: spectre-counter;   
+            font-size: 86px;
+            line-height: 1;
+            color: #f0f0f1;
+            font-weight: 700; 
+            z-index: -1;
+
+            @include bp(fhd) {
+                font-size: 120px;
+            }
+        }  
+
+        &:nth-child(2) {  
+            @include bp(xxl) {
+                flex: 0 0 calc(36% - 80px);
+                max-width: calc(36% - 80px);
+            } 
+            @include bp(fhd) {
+                flex: 0 0 calc(38% - 160px);
+                max-width: calc(38% - 160px);
+            } 
+        }
+
+        &:nth-child(3) {  
+            @include bp(xxl) {
+                flex: 0 0 calc(33% - 80px);
+                max-width: calc(33% - 80px);
+            } 
+            @include bp(fhd) {
+                flex: 0 0 calc(35% - 160px);
+                max-width: calc(35% - 160px);
+            } 
+        }
+    }
+
+    &__item + &__item:after {
+        position: absolute;
+        content: '';
+        background: url(../images/dist/steps-arr.svg) 0 0 no-repeat;
+        width: 24px;
+        height: 61px;
+        top: -105px;
+        left: calc(50% - 12px);
+    }
+
+    &__item + &__item:after {
+        @include bp(xxl) {
+            position: absolute;
+            content: '';
+            left: -80px;
+            top: 34px;
+            width: 80px;
+            height: 24px;
+            background: url(../images/dist/steps-arr1.svg) 25% 0 no-repeat;
+        }
+        @include bp(fhd) {
+            left: -130px;
+            background-position: 50% 0;
+            top: 56px;
+            width: 130px;
+            height: 33px;
+            background: url(../images/dist/steps-arr2.svg) 50% 0 no-repeat;
+        }
+    }
+}

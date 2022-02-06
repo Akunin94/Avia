@@ -1,4 +1,4 @@
-.spectre-form-block {
+.spectre-form-block-new {
     margin: 0 -40px 56px;
 
     @include bp(md) {
@@ -37,7 +37,7 @@
             padding: 49px 100px 70px 90px;
         }
         @include bp(fhd) {
-            padding: 59px 90px 80px 140px;
+            padding: 59px 140px 80px;
         }
     }
 
@@ -47,129 +47,51 @@
             max-width: calc(100% - 242px - 40px);
         }
         @include bp(fhd) {
-            flex: 1 0 calc(100% - 320px - 60px);
-            max-width: calc(100% - 320px - 60px);
+            flex: 1 0 calc(100% - 360px - 60px);
+            max-width: calc(100% - 360px - 60px);
+            padding-right: 50px;
         }
     }
 
     &__title {
-        display: flex;
-        flex-direction: column;
-        font-size: 35px;
-        line-height: 43px;
-        color: #fff;
+        font-size: 30px;
+        line-height: 37px;
         font-weight: 600;
-        margin-bottom: 27px;
+        margin-bottom: 60px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
 
-        @include bp(sm1) {
-            display: block;
-            text-align: center;
-        }
-        @include bp(xxl) {
+        @include bp(md1) {
             text-align: left;
-            font-size: 40px;
-            line-height: 49px;
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 19px;
         }
         @include bp(fhd) {
-            font-size: 56px;
-            line-height: 69px;
-            margin-bottom: 17px;
-        }
-
-        span:first-child {
-            position: relative;
-            margin: 0 35px 12px auto;
-            z-index: 1;
-
-            &:before {
-                position: absolute;
-                left: -27px;
-                bottom: 0;
-                width: 212px;
-                content: '';
-                border-top: 27px solid #10B130;
-                z-index: -1;
-            }
-
-            @include bp(sm1) {
-                margin: 0;
-            }
-        }
-
-        span:last-child {
-            margin-left: auto;
-
-            @include bp(sm1) {
-                margin: 0;
-            }
+            font-size: 51px;
+            line-height: 62px;
+            margin-bottom: 27px;
         }
     }
 
     &__subtitle {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 67px;
 
-        @include bp(md) {
-            flex-wrap: nowrap;
-        }
-        @include bp(xxl) {
-            margin-bottom: 0;
+        @include bp(md1) {
             text-align: left;
-            justify-content: flex-start;
-            margin-left: -6px;
-        }
-    }
-
-    &__small {
-        font-size: 26px;
-        line-height: 31px;
-        color: #fff;
-        margin-right: 12px;
-        position: relative;
-        top: 10px;
-
-        @include bp(md) {
-            font-size: 30px;
-            line-height: 1;
-            top: 6px;
-            margin-right: 15px;
+            font-size: 20px;
+            line-height: 1.2;
+            margin-bottom: 0;
+            font-weight: 500;
         }
         @include bp(fhd) {
-            font-size: 42px;
-            line-height: 1;
-            margin-right: 20px;
-        }
-    }
-
-    &__big {
-        font-size: 76px;
-        line-height: 93px;
-        font-weight: 700;
-        color: #fff;
-
-        @include bp(md) {
-            font-size: 90px;
-            line-height: 1;
-        }
-        @include bp(fhd) {
-            font-size: 127px;
-        }
-    }
-
-    &__icon {
-        width: 100%;
-        margin-top: 5px;
-
-        @include bp(md) {
-            width: 306px;
-            margin-left: 25px;
-        }
-        @include bp(fhd) {
-            width: 430px;
-            margin-left: 35px;
+            font-size: 28px;
+            line-height: 34px;
         }
     }
 
@@ -180,8 +102,8 @@
             margin-left: 40px;
         }
         @include bp(fhd) {
-            flex: 0 0 320px;
-            max-width: 320px;
+            flex: 0 0 360px;
+            max-width: 360px;
             margin-left: 40px;
         }
 
@@ -194,6 +116,9 @@
                 margin-bottom: 34px;
                 text-align: center;
 
+                @include bp(md1) {
+                    display: none;
+                }
                 @include bp(xxl) {
                     font-size: 20px;
                     line-height: 24px;

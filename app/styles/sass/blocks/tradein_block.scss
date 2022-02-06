@@ -1,0 +1,132 @@
+.spectre-tradein {
+    margin: 0 0 99px;
+
+    @include bp(md1) {
+        margin-bottom: 41px;
+    }
+    @include bp(fhd) {
+        margin-bottom: 87px;
+    }
+
+    .spectre-title {
+        margin-bottom: 48px;
+        text-align: center;
+
+        @include bp(fhd) {
+            margin-bottom: 66px;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &__grid {
+        margin-bottom: 53px;
+
+        @include bp(md1) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 47px;
+        }
+    }
+
+    &__item {
+        font-size: 0;
+        position: relative;
+
+        @include bp(md1) {
+            flex: 0 0 calc(50% - 94px);
+            max-width: calc(50% - 94px);
+        }
+        @include bp(fhd) {
+            flex: 0 0 calc(50% - 131px);
+            max-width: calc(50% - 131px);
+        }
+
+        &:before {
+            position: absolute;
+            left: 8px;
+            right: -8px;
+            top: 8px;
+            bottom: -8px;
+            content: '';
+            border: 1px solid #2C2839;
+            z-index: -1;
+
+            @include bp(md1) {
+                left: 12px;
+                right: -12px;
+                top: 12px;
+                bottom: -12px;
+            }
+            @include bp(fhd) {
+                left: 18px;
+                right: -18px;
+                top: 18px;
+                bottom: -18px;
+            }
+        }
+
+        &:nth-child(2) {
+            margin-top: 112px;
+
+            @include bp(md1) {
+                margin: 0;
+            }
+
+            &:after {
+                position: absolute;
+                top: -87px;
+                left: calc(50% - 34px);
+                border-radius: 50%;
+                background: #f83a16;
+                content: '>';
+                width: 68px;
+                height: 68px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 48px;
+                color: #fff;
+                transform: rotate(90deg);
+                font-weight: 700;
+
+                @include bp(md1) {
+                    top: calc(50% - 34px);
+                    left: -125px;
+                    transform: rotate(0);
+                }
+                @include bp(fhd) {
+                    width: 96px;
+                    height: 96px;
+                    top: calc(50% - 48px);
+                    font-size: 68px;
+                    left: -176px;
+                }
+            }
+        }
+    }
+
+    &__note {
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0 -25px;
+        text-align: center;
+
+        @include bp(sm1) {
+            margin: 0;
+        }
+        @include bp(md1) {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 0 80px;
+        }
+        @include bp(fhd) {
+            font-size: 23px;
+            line-height: 28px;
+            padding: 0 160px;
+        }
+    }
+}

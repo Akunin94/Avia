@@ -1,215 +1,12 @@
 .spectre-map {
-    margin: 0 -8px 64px;
-    padding-top: 13px;
-
-    @include bp(sm) {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    @include bp(xxl) {
-        margin-bottom: 100px;
-    }
-    @include bp(fhd) {
-        margin-bottom: 150px;
-    }
+    padding-bottom: 30px;
 
     .spectre-title {
-        margin-left: 0;
-        margin-right: 0;
-
-        @include bp(xxl) {
-            margin-bottom: 27px;
-            padding-bottom: 0;
-        }
-    }
-
-    &__title {
-        font-size: 18px;
-        line-height: 22px;
-        margin-bottom: 34px;
         text-align: center;
-
-        @include bp(xxl) {
-            text-align: left;
-            font-size: 20px;
-            line-height: 1.2;
-            margin-bottom: 27px;
-            max-width: 570px;
-        }
-        @include bp(fhd) {
-            font-size: 27px;
-            line-height: 33px;
-            margin-bottom: 36px;
-            max-width: 760px;
-        }
-    }
-
-    &__nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-left: -15px;
-        padding-bottom: 20px;
-
-        @include bp(md1) {
-            padding-bottom: 12px;
-            margin-left: -24px;
-        }
-        @include bp(xxl) {
-            padding-bottom: 60px;
-        }
-
-        &-item {
-            flex: 0 0 calc(50% - 15px);
-            max-width: calc(50% - 15px);
-            margin: 0 0 15px 15px;
-            display: flex;
-            align-items: center;
-            color: #000;
-            font-size: 12px;
-            line-height: 14px;
-            letter-spacing: -0.2px;
-            padding-right: 5px;
-            cursor: pointer;
-            
-            @include bp(md) {
-                flex: 0 0 calc(33.33% - 24px);
-                max-width: calc(33.33% - 24px);
-                margin: 0 0 24px 24px;
-            }
-            @include bp(xxl) {
-                flex: 0 0 calc(25% - 24px);
-                max-width: calc(25% - 24px);
-                font-size: 16px;
-                line-height: 20px;
-            }
-
-            img {
-                width: 28px;
-                height: 28px;
-                flex-shrink: 0;
-                margin-right: 10px;
-
-                @include bp(xxl) {
-                    margin-right: 12px;
-                    width: 38px;
-                    height: 38px;
-                }
-            }
-
-            &.active {
-                color: #0074C9;
-                font-weight: 600;
-                padding-right: 0;
-            }
-
-            &--all {
-                border-radius: 10px;
-                color: #fff;
-                font-size: 12px;
-                line-height: 14px;
-                padding: 5px 15px 5px 32px;
-                background: #0074c9 url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_237_4838)'%3E%3Cpath d='M11.078 0.737274C10.9935 0.652879 10.8791 0.605469 10.7597 0.605469C10.6403 0.605469 10.5258 0.652879 10.4414 0.737274L5.80776 5.37092L1.17411 0.737274C1.08969 0.652879 0.975211 0.605469 0.85584 0.605469C0.73647 0.605469 0.621987 0.652879 0.537567 0.737274C0.453172 0.821694 0.405762 0.936177 0.405762 1.05555C0.405762 1.17492 0.453172 1.2894 0.537567 1.37382L5.17122 6.00747L0.537567 10.6411C0.453172 10.7255 0.405762 10.84 0.405762 10.9594C0.405762 11.0788 0.453172 11.1932 0.537567 11.2777C0.621987 11.3621 0.73647 11.4095 0.85584 11.4095C0.975211 11.4095 1.08969 11.3621 1.17411 11.2777L5.80776 6.64402L10.4414 11.2777C10.5258 11.3621 10.6403 11.4095 10.7597 11.4095C10.8791 11.4095 10.9935 11.3621 11.078 11.2777C11.1624 11.1932 11.2098 11.0788 11.2098 10.9594C11.2098 10.84 11.1624 10.7255 11.078 10.6411L6.44431 6.00747L11.078 1.37382C11.1624 1.2894 11.2098 1.17492 11.2098 1.05555C11.2098 0.936177 11.1624 0.821694 11.078 0.737274Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_237_4838'%3E%3Crect width='10.8042' height='10.8042' fill='white' transform='translate(0.405533 0.605225)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 14px 50% no-repeat;
-                text-align: left;
-                justify-self: start;
-                flex-basis: auto;
-
-                @include bp(xxl) {
-                    margin-left: calc(50% + 24px);
-                    padding: 9px 20px 9px 43px;
-                    font-size: 16px;
-                    line-height: 1;
-                    background-size: 15px;
-                    background-position: 20px 46%;
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
     }
 
     &__wrap {
-        position: relative;
-        margin-left: -32px;
-        margin-right: -32px;
-
-        @include bp(sm) {
-            margin-left: -40px;
-            margin-right: -40px;
-        }
-        @include bp(xxl) {
-            margin-left: -30px;
-            margin-right: 0;
-        }
-        @include bp(fhd) {
-            margin-left: -40px;
-        }
-
-        .pic1 {
-            position: absolute;
-            top: -45px;
-            right: 0;
-            z-index: 1;
-            pointer-events: none;
-            width: 120px;
-            height: 120px;
-            z-index: 1000;
-            background: url(../images/dist/map_bg1.png) 0 0 / 100% no-repeat;
-
-            @include bp(xxl) {
-                width: 230px;
-                height: 230px;    
-                top: -130px;
-                right: -110px;
-            }
-            @include bp(fhd) {
-                top: -80px;
-            }
-        }
-
-        .pic2 {
-            position: absolute;
-            bottom: -50px;
-            left: 10px;
-            z-index: 1;
-            pointer-events: none;
-            width: 112px;
-            height: 112px;
-            z-index: 1000;
-            background: url(../images/dist/map_bg2.png) 0 0 / auto 100% no-repeat;
-
-            @include bp(xxl) {
-                bottom: -60px;
-                height: 426px;
-                left: -100px;
-                width: 426px;
-            }
-            @include bp(fhd) {
-                bottom: -110px;
-                left: -150px;
-            }
-        }
-
-        .pic3 {
-            position: absolute;
-            bottom: -60px;
-            right: 0;
-            z-index: 1;
-            pointer-events: none;
-            width: 100px;
-            height: 100px;
-            z-index: 1000;
-            background: url(../images/dist/map_bg3.png) 100% 0 / 100% no-repeat;
-
-            @include bp(xxl) {
-                width: 206px;
-                height: 206px;
-                right: -120px;
-                bottom: -123px;
-            }
-        }
+        margin: 0 -40px;
     }
 
     &__map {
@@ -221,5 +18,11 @@
         @include bp(fhd) {
             height: 427px;
         }
+    }
+
+    .leaflet-marker-icon {
+        padding: 5px;
+        position: relative;
+        background: #2c2839;
     }
 }

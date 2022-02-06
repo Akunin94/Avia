@@ -1,5 +1,5 @@
 .spectre-doublecard {
-    margin: 0 -13px;
+    margin: 0 -15px;
     padding-bottom: 32px;
 
     @include bp(sm1) {
@@ -13,24 +13,22 @@
     }
 
     .spectre-title {
-        margin: 0 -10px 29px;
+        margin: 0 0 3px;
         padding: 0;
 
-        @include bp(sm1) {
-            margin-left: 0;
-            margin-right: 0;
-        }
         @include bp(md1) {
             margin-bottom: 59px;
         }
         @include bp(fhd) {
             margin-bottom: 65px;
         }
+
+        &:before {
+            display: none;
+        }
     }
 
     &__wrap {
-        counter-reset: spectre-counter;
-
         @include bp(xxl) {
             display: flex;
             flex-wrap: wrap;
@@ -42,116 +40,186 @@
     }
 
     &__item {
-        margin: 0 0 38px;
-        background: #cce3f4;
-        border-radius: 12px;
+        margin: 0 0 10px;
+        padding: 0 0 50px;
         position: relative;
-        padding: 39px 10px 61px;
-        overflow: hidden;
 
         @include bp(xxl) {
             margin: 0 0 40px 27px;
             flex: 0 0 calc(33.33% - 27px);
             max-width: calc(33.33% - 27px);
-            padding: 47px 10px 74px;
+            padding: 0 15px 70px;
+            margin-bottom: 20px;
         }
         @include bp(fhd) {
             flex: 0 0 calc(33.33% - 36px);
             max-width: calc(33.33% - 36px);
-            margin: 0 0 54px 36px;
-            padding: 63px 15px 100px;
+            padding: 0 0 70px;
+            margin-left: 36px;
         }
 
         &:before {
             position: absolute;
-            counter-increment: spectre-counter;
-            content: counter(spectre-counter, decimal-leading-zero);
+            content: '';
             color: #72b2e1;
-            font-size: 83px;
-            line-height: 1;
-            top: 3px;
-            left: -17px;
+            top: 0;
+            left: 0;
             pointer-events: none;
-            font-weight: 800;
+            width: 110px;
+            height: 110px;
+            background: url(../images/dist/doublecard_number1.png) 0 0 / 100% no-repeat;
 
             @include bp(xxl) {
-                font-size: 100px;
-                left: -21px;
-                letter-spacing: -4px;
+                width: 136px;
+                height: 136px;
             }
             @include bp(fhd) {
-                font-size: 136px;
-                left: -29px;
+                width: 192px;
+                height: 192px;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            border-top: 1px solid #96949C;
+            opacity: 0.5;
+
+            @include bp(xxl) {
+                border-top: none;
+                border-left: 1px solid #96949C;
+                top: 20px;
+                left: -10px;
+                bottom: 20px;
+                right: auto;
+            }
+            @include bp(fhd) {
+                top: 30px;
+                bottom: 30px;
+            }
+        }
+
+        &:nth-child(1), &:nth-child(4) {
+            &:after {
+                @include bp(xxl) {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(2):before {
+            background-image: url(../images/dist/doublecard_number2.png);
+        }
+
+        &:nth-child(3):before {
+            background-image: url(../images/dist/doublecard_number3.png);
+        }
+
+        &:nth-child(4):before {
+            background-image: url(../images/dist/doublecard_number4.png);
+        }
+
+        &:nth-child(5):before {
+            background-image: url(../images/dist/doublecard_number5.png);
+        }
+
+        &:nth-last-child(1), &:nth-last-child(2) {
+            &:after {
+                display: none;
+
+                @include bp(xxl) {
+                    display: block;
+                }
+            }
+        }
+
+        &:nth-last-child(1):after {
+            @include bp(xxl) {
                 top: 0;
-                letter-spacing: -5px;
+                bottom: 0;
             }
         }
 
         &--form {
             background: url(../images/dist/form_bg1.png) 50% 50% / cover no-repeat;
-            padding: 20px 50px;
+            padding: 35px 60px ;
             min-height: 242px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            margin-left: -25px;
+            margin-right: -25px;
+
+            @include bp(sm) {
+                margin-left: -40px;
+                margin-right: -40px;
+            }
+            @include bp(xxl) {
+                margin: 0 0 0 27px;
+                padding: 24px 60px 30px;
+                align-self: flex-start;
+            }
+            @include bp(fhd) {
+                margin-left: 36px;
+            }
+
+            & > * {
+                position: relative;
+            }
 
             &:before {
-                display: none;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: #2C2839;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
             }
         }
     }
 
     &__title {
-        padding: 0 0 27px 78px;
-        margin-bottom: 27px;
+        padding: 0 0 0 100px;
+        margin-bottom: 10px;
         position: relative;
         font-size: 16px;
         line-height: 20px;
-        color: #0c2069;
+        color: #2C2839;
         font-weight: 600;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 96px;
+        width: 100%;
 
         @include bp(xxl) {
             font-size: 20px;
             line-height: 24px;
-            padding-left: 94px;
+            padding-left: 110px;
             letter-spacing: -0.5px;
+            min-height: 136px;
         }
         @include bp(fhd) {
             font-size: 27px;
             line-height: 33px;
-            padding-left: 130px;
-            padding-bottom: 43px;
-        }
-
-        &:before {
-            position: absolute;
-            bottom: 0;
-            left: 64px;
-            width: 110px;
-            content: '';
-            border-top: 1px solid;
-
-            @include bp(xxl) {
-                left: 75px;
-            }
-            @include bp(fhd) {
-                left: 110px;
-                width: 180px;
-            }
+            padding-left: 180px;
+            min-height: 160px;
         }
     }
 
     &__description {
         font-size: 16px;
-        line-height: 1.35;
-        text-align: center;
-        color: #0c2069;
-
-        @include bp(fhd) {
-            font-size: 20px;
-        }
+        line-height: 20px;
+        text-align: right;
+        color: #2C2839;
     }
 
     &__form {
@@ -170,17 +238,11 @@
         }
 
         &-title {
-            font-size: 21px;
-            line-height: 26px;
+            font-size: 18px;
+            line-height: 22px;
             color: #fff;
-            margin-bottom: 17px;
             font-weight: 600;
-
-            @include bp(fhd) {
-                font-size: 31px;
-                line-height: 38px;
-                margin-bottom: 23px;
-            }
+            margin: 0 -25px 20px;
 
             &--success {
                 display: none;
@@ -203,24 +265,30 @@
         }
 
         .spectre-input {
-            height: 34px;
+            height: 36px;
 
             @include bp(xxl) {
-                height: 42px;
-            }
-            @include bp(fhd) {
-                height: 56px;
-                border-radius: 14px;
-            }
+                height: 38px;
+            }   
         }
 
         .spectre-btn {
+            height: 44px;
+            position: relative;
+
             @include bp(xxl) {
-                height: 36px;
+                height: 46px;
+                font-size: 16px;
             }
-            @include bp(fhd) {
-                height: 50px;
-                border-radius: 14px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                right: -4px;
+                top: 4px;
+                left: 4px;
+                bottom: -4px;
+                border: 1px solid #F83A16;
             }
         }
     }

@@ -226,18 +226,18 @@ input, textarea {
 	font-size: 15px;
 	line-height: 1;
 	border: none;
-	border-radius: 9px;
+	border-radius: 0;
 	padding: 5px 10px 6px;
 	background: #fff;
 	font-weight: 600;
-	color: #0074C9;
+	color: #2C2839;
 	width: 100%;
 	text-align: center;
 	font-family: $userfont;
 	height: 48px;
 
 	&::-webkit-input-placeholder, &:-ms-input-placeholder, &::placeholder, &::-moz-placeholder {
-		color: #0074C9;
+		color: #2C2839;
 	}
 
 	@include bp(xxl) {
@@ -256,11 +256,11 @@ input, textarea {
 	background: #F83A16;
 	color: #fff;
 	text-align: center;
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 1;
 	padding: 11px 10px 12px;
 	border: none;
-	border-radius: 10px;
+	border-radius: 0;
 	text-decoration: none;
 	cursor: pointer;
 	transition: 0.2s;

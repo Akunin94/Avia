@@ -5,10 +5,10 @@
         margin-bottom: 121px;
     }
     @include bp(xxl) {
-        margin: 0 0 200px -30px;
+        margin: 0 -60px 102px;
     }
     @include bp(fhd) {
-        margin-left: -40px;
+        margin: 0 -100px 144px;
     }
 
     .spectre-title {
@@ -23,7 +23,7 @@
     }
 
     &__wrap {
-        background: #147FCD url(../images/dist/ipoteka_bg.png) left 100% top calc(100% + 1px) / cover no-repeat;
+        background: #2e2939 url(../images/dist/ipoteka_bg.png) left 100% top calc(100% + 1px) / cover no-repeat;
         padding: 39px 20px 64px;
 
         @include bp(xxl) {
@@ -241,9 +241,27 @@
                     height: 36px;
                     padding-top: 2px;
                     padding-bottom: 2px;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        right: -6px;
+                        left: 6px;
+                        top: 6px;
+                        bottom: -6px;
+                        border: 1px solid #F83A16;
+                    }
                 }
                 @include bp(fhd) {
                     height: 52px;
+
+                    &:before {
+                        right: -8px;
+                        left: 8px;
+                        top: 8px;
+                        bottom: -8px;
+                    }
                 }
             }
         }

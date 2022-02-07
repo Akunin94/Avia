@@ -147,6 +147,7 @@
             display: block;
             width: 200px;
             margin: 20px auto 30px;
+            background: #2c2839;
         }
 
         &-item {
@@ -330,7 +331,7 @@
                 left: 4px;
                 top: 4px;
                 bottom: -4px;
-                border: 1px solid #000;
+                border: 1px solid #2c2839;
                 transition: 0.2s;
 
                 @include bp(fhd) {

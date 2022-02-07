@@ -1,34 +1,14 @@
 .spectre-advantages {
-    margin: 0 -18px;
+    margin: 0 -40px;
     padding-bottom: 93px;
-    background: url(../images/dist/about-us-bg.png) right 0 bottom 225px / 320px no-repeat;
-
-    @include bp(sm1) {
-        margin: 0;
-    }
-    @include bp(xxl) {
-        padding-bottom: 88px;
-        background-position: right 0 top 0;
-        background-size: auto calc(100% - 88px);
-        margin-right: -100px;
-        padding-right: 120px;
-    }
-    @include bp(fhd) {
-        margin-right: -220px;
-        padding-right: 220px;
-        padding-bottom: 136px;
-        background-size: auto calc(100% - 136px);
-    }
+    background: url(../images/dist/about-us-bg.png) center top / cover no-repeat;
 
     .spectre-title {
-        margin: 0 0 33px; 
+        margin: 0 5px 40px;
+        padding: 0;
 
-        @include bp(xxl) {
-            max-width: 640px;
-        }
-        @include bp(fhd) {
-            margin-bottom: 47px;
-            max-width: 1000px;
+        &:before {
+            display: none;
         }
     }
 
@@ -41,15 +21,16 @@
     }
 
     &__description {
-        margin-bottom: 35px;
+        margin: 0 12px 20px;
+        text-align: center;
 
         @include bp(xxl) {
             margin-bottom: 0;
         }
 
         &-text {
-            font-size: 15px;
-            line-height: 1.2;
+            font-size: 12px;
+            line-height: 15px;
             color: #000;
 
             @include bp(xxl) {
@@ -75,14 +56,6 @@
         }
     }
 
-    &__description &__links {
-        display: none;
-
-        @include bp(xxl) {
-            display: flex;
-        }
-    }
-
     &__options {
         display: flex;
         flex-wrap: wrap;
@@ -103,31 +76,22 @@
         &-item {
             flex: 0 0 43%;
             max-width: 43%;
+            margin: 0 28%;
             text-align: center;
+            margin-top: 38px;
 
             @include bp(xxl) {
                 flex-basis: 40%;
                 max-width: 40%;
             }
-
-            &:nth-child(2n) ~ & {
-                margin-top: 62px;
-
-                @include bp(xxl) {
-                    margin-top: 84px;
-                }
-                @include bp(fhd) {
-                    margin-top: 118px;
-                }
-            }
         }
 
         &-title {
-            font-size: 30px;
+            font-size: 40px;
             line-height: 1.2;
             padding-bottom: 8px;
             margin-bottom: 5px;
-            color: #0074c9;
+            color: #D11818;
             font-weight: 600;
             position: relative;
 
@@ -149,7 +113,7 @@
                 right: 0;
                 bottom: 0;
                 content: '';
-                border-bottom: 2px solid #0074C9;
+                border-bottom: 2px solid #D11818;
                 border-radius: 5px;
 
                 @include bp(xxl) {
@@ -162,7 +126,7 @@
         }
 
         &-body {
-            font-size: 15px;
+            font-size: 20px;
             line-height: 1.2;
             color: #000;
             margin: 0 -5%;
@@ -183,26 +147,13 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-
-        @include bp(xxl) {
-            display: none;
-            align-items: flex-start;
-            justify-content: flex-start;
-            text-align: left;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin-left: -29px;
-        }
-        @include bp(fhd) {
-            margin-left: -41px;
-        }
     }
 
     &__link {
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
         font-weight: 600;
-        color: #0074c9;
+        color: #D11818;
 
         @include bp(xxl) {
             margin: 0 0 20px 29px;
@@ -214,7 +165,7 @@
         }
 
         & + & {
-            margin-top: 24px;
+            margin-top: 25px;
 
             @include bp(xxl) {
                 margin-top: 0;

@@ -3,26 +3,167 @@
 
     .spectre-title {
         text-align: center;
+        margin-bottom: 41px;
+        padding: 0;
+        
+        @include bp(xxl) {
+            margin-bottom: 33px;
+        }
+        @include bp(fhd) {
+            margin-bottom: 46px;
+        }
+
+        &:before {
+            display: none;
+        }
     }
 
     &__wrap {
         margin: 0 -40px;
+
+        @include bp(xxl) {
+            margin: 0 -60px;
+        }
+        @include bp(fhd) {
+            margin: 0 -100px;
+        }
     }
 
     &__map {
         height: 246px;
 
         @include bp(xxl) {
-            height: 318px;
+            height: 400px;
         }
         @include bp(fhd) {
-            height: 427px;
+            height: 600px;
+        }
+
+        img[src*="logo_m"] {
+            display: none;
+        }
+    }
+
+    &__nav {
+        margin: 0 -30px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 32px 0 0;
+
+        @include bp(md) {
+            justify-content: center;
+        }
+        @include bp(xxl) {
+            margin: 0 -10px;
+        }
+        @include bp(fhd) {
+            margin: 0 -30px;
+            padding-top: 46px;
+        }
+
+        &-item {
+            flex: 0 0 calc(33.33% - 10px);
+            max-width: calc(33.33% - 10px);
+            margin: 0 5px 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+
+            @include bp(md) {
+                flex-basis: calc(20% - 10px);
+                max-width: calc(20% - 10px);
+            }
+            @include bp(xxl) {
+                flex-basis: calc(11.111% - 10px);
+                max-width: calc(11.111% - 10px);
+            }
+        }
+
+        &-item.active &-icon img {
+            opacity: 1;
+        }
+
+        &-icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            img {
+                max-height: 100%;
+                opacity: 0.4;
+                transition: 0.2s;
+
+                &[src*="logo_m"] {
+                    display: none;
+                }
+            }
+
+            @include bp(xxl) {
+                width: 68px;
+                height: 56px;
+            }
+            @include bp(fhd) {
+                width: 95px;
+                height: 78px;
+            }
+        }
+
+        &-text {
+            font-size: 12px;
+            line-height: 15px;
+            margin-top: 8px;
+            font-weight: 300;
+            color: #000;
+            margin-top: 8px;
+
+            @include bp(xxl) {
+                font-size: 15px;
+                line-height: 1.2;
+                margin-top: 10px;
+            }
+            @include bp(fhd) {
+                font-size: 21px;
+                line-height: 26px;
+                margin-top: 14px;
+            }
         }
     }
 
     .leaflet-marker-icon {
-        padding: 5px;
+        padding: 8px;
         position: relative;
-        background: #2c2839;
+        background: #4ed073;
+        object-fit: contain;
+
+        &[src*="comp2.svg"] {
+            background: #4e73d0;
+        }
+        &[src*="comp3.svg"] {
+            background: #6abad3;
+        }
+        &[src*="comp4.svg"] {
+            background: #5ab42f;
+        }
+        &[src*="comp5.svg"] {
+            background: #c16ad7;
+        }
+        &[src*="comp6.svg"] {
+            background: #21921f;
+        }
+        &[src*="comp7.svg"] {
+            background: #cd0364;
+        }
+        &[src*="comp8.svg"] {
+            background: #878787;
+        }
+        &[src*="comp9.svg"] {
+            background: #e74f4f;
+        }
     }
 }

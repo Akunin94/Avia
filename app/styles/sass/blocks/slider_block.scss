@@ -21,17 +21,20 @@ $slider: '.spectre-slider';
 
     &:nth-of-type(2), &:nth-of-type(4) {
         .slick-arrow {
-            @include bp(lg) {
-                left: 347px;
+            @include bp(xxl) {
+                left: 260px;
+            }
+            @include bp(fhd) {
+                left: 447px;
             }
         }
         #{$slider}__pager {
             @include bp(lg) {
                 right: auto;
-                left: 410px;
+                left: 324px;
             }
             @include bp(fhd) {
-                left: 450px;
+                left: 550px;
             }
         }
         #{$slider}__image {
@@ -47,11 +50,22 @@ $slider: '.spectre-slider';
                 text-align: right;
                 max-width: 380px;
             }
+            @include bp(fhd) {
+                max-width: 560px;
+            }
         }
         #{$slider}__bg {
             @include bp(lg) {
                 padding-right: 116px;
                 padding-left: 58px;
+            }
+        }
+        #{$slider}__text:before {
+            @include bp(lg) {
+                bottom: -20px;
+                left: -20px;
+                right: 20px;
+                top: 20px;
             }
         }
     }
@@ -133,7 +147,7 @@ $slider: '.spectre-slider';
             margin-left: 0;
         }
         @include bp(fhd) {
-            bottom: 224px;
+            bottom: 174px;
             width: 60px;
             height: 60px;
             left: 675px;
@@ -192,7 +206,7 @@ $slider: '.spectre-slider';
             font-size: 60px;
             line-height: 73px;
             left: 774px;
-            bottom: 220px;
+            bottom: 170px;
         }
     }
 
@@ -314,7 +328,7 @@ $slider: '.spectre-slider';
             flex-direction: column;
         }
         @include bp(fhd) {
-            padding: 137px 58px 300px 116px;
+            padding: 137px 58px 250px 116px;
         }
     }
 
@@ -338,6 +352,11 @@ $slider: '.spectre-slider';
         }
         @include bp(fhd) {
             margin-bottom: 17px;
+            font-size: 49px;
+            line-height: 60px;
+            max-width: 560px;
+            letter-spacing: -0.2px;
+            top: -40px;
         }
     }
 
@@ -355,7 +374,8 @@ $slider: '.spectre-slider';
             margin-top: auto;
         }
         @include bp(fhd) {
-            font-size: 22px;
+            font-size: 35px;
+            margin-bottom: 17px;
         }
     }
 
@@ -367,6 +387,10 @@ $slider: '.spectre-slider';
         @include bp(lg) {
             font-size: 16px;
             line-height: 19px;
+        }
+        @include bp(fhd) {
+            font-size: 22px;
+            line-height: 27px;
         }
     }
 }

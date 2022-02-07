@@ -22,6 +22,10 @@
         @include bp(fhd) {
             margin-bottom: 30px;
         }
+
+        &:before {
+            color: #2C2839;
+        }
     }
 
     &__description {
@@ -36,15 +40,14 @@
             line-height: 24px;
         }
         @include bp(xxl) {
-            text-align: left;
             max-width: 570px;
-            margin-bottom: 26px;
+            margin: 0 auto 26px;
         }
         @include bp(fhd) {
             font-size: 27px;
             line-height: 33px;
             max-width: 780px;
-            margin-bottom: 35px;
+            margin: 0 auto 35px;
         }
     }
 
@@ -148,6 +151,13 @@
             width: 200px;
             margin: 20px auto 30px;
             background: #2c2839;
+
+            @include bp(xxl) {
+                margin-top: 40px;
+            }
+            @include bp(fhd) {
+                margin-top: 60px;
+            }
         }
 
         &-item {

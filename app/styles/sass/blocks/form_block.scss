@@ -13,12 +13,19 @@
 
     .spectre-title {
         margin: 0 40px 24px;
+        padding: 0 0 20px;
+        text-align: center;
 
         @include bp(xxl) {
             margin-bottom: 46px;
+            padding-bottom: 0;
         }
         @include bp(fhd) {
             margin-bottom: 71px;
+        }
+
+        &:before {
+            border-color: #2C2839;
         }
     }
 

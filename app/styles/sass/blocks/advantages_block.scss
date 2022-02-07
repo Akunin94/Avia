@@ -15,8 +15,8 @@
     @include bp(fhd) {
         background-size: auto;
         background-position: 50% 100%;
-        margin: 0 -100px -326px;
-        padding: 0 100px 326px;
+        margin: 0 -100px -366px;
+        padding: 0 100px 366px;
     }
 
     .spectre-title {
@@ -101,6 +101,11 @@
                 margin: 38px 5% 0;
             }
             @include bp(xxl) {
+                flex-basis: 16%;
+                max-width: 16%;
+                margin: 38px 4.5% 0;
+            }
+            @include bp(fhd) {
                 flex-basis: 20%;
                 max-width: 20%;
                 margin: 38px 2.5% 0;

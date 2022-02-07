@@ -386,6 +386,9 @@ img {
 				display: none;
 			}
 		}
+		@include bp(fhd) {
+			margin-bottom: 110px;
+		}
 	}
 }
 

@@ -1,5 +1,5 @@
 .spectre-doublecard {
-    margin: 0 -15px;
+    margin: 0 -20px;
     padding-bottom: 32px;
 
     @include bp(sm1) {
@@ -9,7 +9,7 @@
         padding-bottom: 60px;
     }
     @include bp(fhd) {
-        padding-bottom: 95px;
+        padding-bottom: 120px;
     }
 
     .spectre-title {
@@ -48,7 +48,7 @@
             margin: 0 0 40px 27px;
             flex: 0 0 calc(33.33% - 27px);
             max-width: calc(33.33% - 27px);
-            padding: 0 15px 70px;
+            padding: 0 15px 40px;
             margin-bottom: 20px;
         }
         @include bp(fhd) {
@@ -161,11 +161,12 @@
             }
             @include bp(xxl) {
                 margin: 0 0 0 27px;
-                padding: 24px 60px 30px;
-                align-self: flex-start;
+                padding: 24px 40px 30px;
             }
             @include bp(fhd) {
                 margin-left: 36px;
+                padding-left: 60px;
+                padding-right: 60px;
             }
 
             & > * {
@@ -244,6 +245,11 @@
             font-weight: 600;
             margin: 0 -25px 20px;
 
+            @include bp(fhd) {
+                font-size: 25px;
+                line-height: 30px;
+            }
+
             &--success {
                 display: none;
 
@@ -270,6 +276,9 @@
             @include bp(xxl) {
                 height: 38px;
             }   
+            @include bp(fhd) {
+                height: 54px;
+            }
         }
 
         .spectre-btn {
@@ -279,6 +288,9 @@
             @include bp(xxl) {
                 height: 46px;
                 font-size: 16px;
+            } 
+            @include bp(fhd) {
+                height: 64px;
             }
 
             &:before {
@@ -288,7 +300,14 @@
                 top: 4px;
                 left: 4px;
                 bottom: -4px;
-                border: 1px solid #F83A16;
+                border: 1px solid #F83A16; 
+
+                @include bp(fhd) {
+                    right: -6px;
+                    top: 6px;
+                    left: 6px;
+                    bottom: -6px;
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 .spectre-info1 {
     margin: 0 -15px 35px;
+    padding-bottom: 30px;
 
     @include bp(sm1) {
         margin-left: 0;
@@ -7,6 +8,7 @@
     }
     @include bp(xxl) {
         margin-bottom: 83px;
+        padding-bottom: 0;
     }
     @include bp(fhd) {
         margin-bottom: 117px;
@@ -15,6 +17,7 @@
     .spectre-title {
         margin: 0 0 13px;
         padding: 0;
+        text-align: center;
 
         &:before {
             display: none;

@@ -11,6 +11,7 @@
     .spectre-title {
         margin-bottom: 48px;
         text-align: center;
+        padding: 0;
 
         @include bp(fhd) {
             margin-bottom: 66px;

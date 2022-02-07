@@ -5,7 +5,7 @@
     align-items: flex-start;
     justify-content: center;
     min-height: 544px;
-    padding: 106px 20px 0;
+    padding: 0 20px;
     position: relative;
 
     @include bp(sm) {
@@ -252,6 +252,8 @@
         background: #d11818;
         border-color: #D11818;
         min-width: 230px;
+        font-size: 12px;
+        border-radius: 10px;
 
         @include bp(fhd) {
             min-width: 320px;

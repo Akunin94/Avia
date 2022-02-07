@@ -1,11 +1,32 @@
 .spectre-advantages {
-    margin: 0 -40px;
-    padding-bottom: 93px;
+    margin: 0 -40px -414px;
+    padding-bottom: 414px;
     background: url(../images/dist/about-us-bg.png) center top / cover no-repeat;
+
+    @include bp(md) {
+        margin-bottom: -323px;
+        padding-bottom: 323px;
+    }
+    @include bp(xxl) {
+        margin: 0 -60px -226px;
+        padding: 30px 60px 226px;
+        background-size: 100% 100%;
+    }
+    @include bp(fhd) {
+        background-size: auto;
+        background-position: 50% 100%;
+        margin: 0 -100px -326px;
+        padding: 0 100px 326px;
+    }
 
     .spectre-title {
         margin: 0 5px 40px;
         padding: 0;
+        text-align: center;
+
+        @include bp(xxl) {
+            margin-bottom: 33px;
+        }
 
         &:before {
             display: none;
@@ -26,6 +47,7 @@
 
         @include bp(xxl) {
             margin-bottom: 0;
+            text-align: left;
         }
 
         &-text {
@@ -34,12 +56,12 @@
             color: #000;
 
             @include bp(xxl) {
-                margin-bottom: 46px;
+                font-size: 15px;
+                line-height: 1.2;
             }
             @include bp(fhd) {
                 font-size: 21px;
                 line-height: 26px;
-                margin-bottom: 65px;
             }
 
             strong {
@@ -63,14 +85,7 @@
         margin: 0 10px 54px;
 
         @include bp(xxl) {
-            margin: 15px 0 0 60px;
-            flex: 0 0 360px;
-            max-width: 360px;
-        }
-        @include bp(fhd) {
-            flex-basis: 520px;
-            max-width: 520px;
-            margin: 20px 0 0 75px;
+            margin-bottom: 70px;
         }
 
         &-item {
@@ -80,9 +95,15 @@
             text-align: center;
             margin-top: 38px;
 
-            @include bp(xxl) {
+            @include bp(md) {
                 flex-basis: 40%;
                 max-width: 40%;
+                margin: 38px 5% 0;
+            }
+            @include bp(xxl) {
+                flex-basis: 20%;
+                max-width: 20%;
+                margin: 38px 2.5% 0;
             }
         }
 
@@ -147,6 +168,14 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        @include bp(xxl) {
+            flex-direction: row;
+            margin: 0 -12px;
+        }
+        @include bp(fhd) {
+            margin: 0 -17px;
+        }
     }
 
     &__link {
@@ -156,12 +185,13 @@
         color: #D11818;
 
         @include bp(xxl) {
-            margin: 0 0 20px 29px;
+            white-space: nowrap;
+            margin: 0 12px;
         }
         @include bp(fhd) {
-            margin: 0 0 28px 41px;
             font-size: 23px;
             line-height: 28px;
+            margin: 0 17px;
         }
 
         & + & {

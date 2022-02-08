@@ -304,7 +304,7 @@ $(function(){
 	});
 
 	function formAjax(url, formData, $form, $success_block, $hide_block) {
-		ym(87187798,'reachGoal','zayavka')
+		// ym(87187798,'reachGoal','zayavka')
 
 		$.ajax({
 			type: 'post',
@@ -439,7 +439,7 @@ $(function(){
 		DG.then(function () {
 			const zoom = $('body').width() > 960 ? 14 : 13;
 			map = DG.map('map', {
-				center: [54.980907, 82.875047],
+				center: [55.075250, 82.979841],
 				zoom,
 				dragging : true,
 				touchZoom: false,
@@ -458,47 +458,47 @@ $(function(){
 			)
 			const type1 = setMarkers(
 				map,
-				[],
+				[[55.077395, 82.970470], [55.067927, 82.974031], [55.070607, 82.968932], [55.067888, 82.964428],[55.075198, 82.961701],[55.078191, 82.958296]],
 				'images/dist/comp1.svg'
 			)
 			const type2 = setMarkers(
 				map,
-				[],
+				[[55.073122, 82.980723],[55.072180, 82.968067],[55.077265, 82.968011],[55.078426, 82.972385],[55.082112, 82.959303]],
 				'images/dist/comp2.svg'
 			)
 			const type3 = setMarkers(
 				map,
-				[],
+				[[55.076459, 82.976107],[55.076962, 82.970798],[55.072235, 82.971506]],
 				'images/dist/comp3.svg'
 			)
 			const type4 = setMarkers(
 				map,
-				[],
+				[[55.073770, 82.970232],[55.075765, 82.979335],[55.077080, 82.971789],[55.073785, 82.976315],[55.073096, 82.973369]],
 				'images/dist/comp4.svg'
 			)
 			const type5 = setMarkers(
 				map,
-				[],
+				[[55.076601, 82.971571],[55.081512, 82.964688],[55.070246, 82.969189],[55.078322, 82.960409]],
 				'images/dist/comp5.svg'
 			)
 			const type6 = setMarkers(
 				map,
-				[],
+				[[55.076226, 82.978080],[55.079033, 82.974043],[55.078242, 82.968339],[55.074991, 82.965963],[55.073831, 82.977890]],
 				'images/dist/comp6.svg'
 			)
 			const type7 = setMarkers(
 				map,
-				[],
+				[[55.074652, 82.978418],[55.078921, 82.970960],[55.072659, 82.974315]],
 				'images/dist/comp7.svg'
 			)
 			const type8 = setMarkers(
 				map,
-				[],
+				[[55.075371, 82.977525],[55.076122, 82.975200],[55.073528, 82.975813],[55.080128, 82.968100]],
 				'images/dist/comp8.svg'
 			)
 			const type9 = setMarkers(
 				map,
-				[],
+				[[55.075674, 82.981944],[55.074099, 82.975646],[55.071643, 82.969800],[55.077017, 82.971867],[55.075707, 82.961211]],
 				'images/dist/comp9.svg'
 			)
 
@@ -556,7 +556,7 @@ $(function(){
 			})
 			$('.spectre-map__nav-item--all').click(function () {
 				removeAllMarkers()
-				mainMarker.addTo(map);
+				// mainMarker.addTo(map);
 				type1.addTo(map);
 				type2.addTo(map);
 				type3.addTo(map);
@@ -567,11 +567,13 @@ $(function(){
 				type8.addTo(map);
 				type9.addTo(map);
 			})
+
+			$('.spectre-map__nav-item--type1').click()
 		});
 	}
 
 	function setMarkers(map, coords, iconUrl, main = false) {
-		var iconSize = [40, 40];
+		var iconSize = [30, 30];
 		if (main) {
 			iconSize = [64, 64];
 		}

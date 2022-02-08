@@ -107,7 +107,8 @@ function buildcopy() {
 		'app/images/**/*.*',
 		'!app/images/src/**/*',
 		'app/fonts/**/*',
-		'app/files/**/*'
+		'app/files/**/*',
+		'app/send.php'
 	], { base: 'app/' })
 	.pipe(dest('docs'))
 }

@@ -261,6 +261,12 @@
             font-size: 17px;
             border-radius: 14px;
         }
+
+        &:hover {
+            background: #9f1616;
+            border-color: #9f1616;
+            color: #fff;
+        }
     }
 
     &__video {

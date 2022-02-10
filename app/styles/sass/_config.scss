@@ -108,15 +108,13 @@ input, textarea {
 
 		@include bp(xxl) {
 			display: block;
-		}
-		@include bp(xxxl) {
-			padding: 88px 10px 24px;
+			padding: 40px 10px 24px;
 		}
 		@include bp(fhd) {
 			width: 290px;
 			max-width: 290px;
 			flex-basis: 290px;
-			padding-top: 123px;
+			padding-top: 56px;
 		}
 
 		&.notmain {
@@ -166,13 +164,19 @@ input, textarea {
 	}
 
 	&__logo {
-		display: inline-block;
-		vertical-align: top;
-		margin-bottom: 20px;
+		text-align: center;
+		margin-bottom: 30px;
+		font-size: 15px;
+		line-height: 20px;
+		font-family: $pt;
+		display: block;
+		color: #fff;
+		text-decoration: none;
 
-		img {
-			width: auto;
-			height: auto;
+		@include bp(fhd) {
+			font-size: 21px;
+			line-height: 28px;
+			margin-bottom: 40px;
 		}
 	}
 
@@ -197,12 +201,12 @@ input, textarea {
 			line-height: 11px;
 			color: #fff;
 			opacity: 0.6;
+			padding-top: 10px;
 
 			@include bp(xxl) {
-				margin-top: 20px;
+				margin-top: auto;
 			}
 			@include bp(fhd) {
-				margin-top: 30px;
 				font-size: 13px;
 				line-height: 16px;
 			}
@@ -268,10 +272,18 @@ input, textarea {
 	font-family: $userfont;
 	border: 1px solid transparent;
 
+	&:before {
+		transition: border-color 0.2s ease;
+	}
+
 	&:hover {
-		background: none;
-		color: #F83A16;
-		border-color: #F83A16;
+		background: #9f1616;
+		color: #fff;
+		border-color: #9f1616;
+
+		&:before {
+			border-color: #9f1616 !important;
+		}
 	}
 
 	@include bp(xxl) {
@@ -457,14 +469,14 @@ img {
 		z-index: 11;
 	}
 	body:after {
-		position: fixed;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		height: 66px;
-		background: rgba(0, 0, 0, .33);
-		content: '';
-		z-index: 10;
+		// position: fixed;
+		// left: 0;
+		// right: 0;
+		// bottom: 0;
+		// height: 66px;
+		// background: rgba(0, 0, 0, .33);
+		// content: '';
+		// z-index: 10;
 	}
 	.ws-quiz-container {
 		.ws-quiz-btn-el-container {

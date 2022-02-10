@@ -38,10 +38,6 @@
         @include bp(fhd) {
             height: 600px;
         }
-
-        img[src*="logo_m"] {
-            display: none;
-        }
     }
 
     &__nav {
@@ -164,6 +160,10 @@
         }
         &[src*="comp9.svg"] {
             background: #e74f4f;
+        }
+        &[src*="logo_m.svg"] {
+            background: #000;
+            padding-bottom: 6px;
         }
     }
 }

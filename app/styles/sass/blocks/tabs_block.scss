@@ -352,8 +352,13 @@
                 }
             }
 
+            &:hover {
+                background: #0074c9;
+                color: #fff;
+            }
+
             &:hover:before {
-                border-color: #0074c9;
+                border-color: #0074c9 !important;
             }
         }
     }

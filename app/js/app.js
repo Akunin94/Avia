@@ -625,6 +625,18 @@ $(function(){
 	// ACTIVE MENU END
 
 
+	// COOKIE BLOCK START
+	$('.cookie-container .btn').click(function(){
+		$('.cookie-container').hide();
+		localStorage.setItem('hideCookie', true)
+	});
+
+	if (!localStorage.getItem('hideCookie')) {
+		$('.cookie-container').addClass('show')
+	}
+	// COOKIE BLOCK END
+
+
 
 	function formatMoney(amount, decimalCount = 0, decimal = ".", thousands = " ") {
 		try {
